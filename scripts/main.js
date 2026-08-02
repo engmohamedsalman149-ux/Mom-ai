@@ -8,6 +8,7 @@ import { initHero } from "../components/hero/hero.js";
 import { initScrollReveal } from "../components/features/features.js";
 import { initGallery } from "../components/gallery/gallery.js";
 import { initRoadmap } from "../components/roadmap/roadmap.js";
+import { initTestimonialsSlider } from "../components/testimonials/testimonials.js";
 
 document.documentElement.classList.add("js-enabled");
 
@@ -18,4 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   initGallery();
   initRoadmap();
+  initTestimonialsSlider();
 });
