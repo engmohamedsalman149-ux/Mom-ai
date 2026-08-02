@@ -16,7 +16,56 @@
 <body>
   <a href="#main-content" class="sr-only">تخطي إلى المحتوى الرئيسي</a>
 
-  <!-- Header component will be added here -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a href="#" class="site-header__brand" aria-label="أم ذكية - الصفحة الرئيسية">
+        <span class="site-header__logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C9 2 6.5 4.5 6.5 7.5C6.5 9.5 7.6 11.2 9.2 12.1C6.2 13.2 4 16.1 4 19.5V21H20V19.5C20 16.1 17.8 13.2 14.8 12.1C16.4 11.2 17.5 9.5 17.5 7.5C17.5 4.5 15 2 12 2Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="site-header__brand-text">
+          <span class="site-header__brand-name">أم ذكية</span>
+          <span class="site-header__tagline">خطوة بخطوة نحو أم أكثر ذكاءً</span>
+        </span>
+      </a>
+
+      <nav class="site-header__nav" id="primary-navigation" aria-label="التنقل الرئيسي">
+        <ul class="site-header__nav-list">
+          <li><a href="#features" class="site-header__nav-link">المميزات</a></li>
+          <li><a href="#how-it-works" class="site-header__nav-link">كيف تعمل</a></li>
+          <li><a href="#testimonials" class="site-header__nav-link">آراء الأمهات</a></li>
+          <li><a href="#faq" class="site-header__nav-link">الأسئلة الشائعة</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="#cta" class="btn btn--primary site-header__cta">ابدئي رحلتك الآن</a>
+        <button
+          type="button"
+          class="site-header__menu-toggle"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="فتح القائمة"
+        >
+          <span class="site-header__menu-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="site-header__mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <nav aria-label="التنقل - نسخة الجوال">
+        <ul class="site-header__mobile-nav-list">
+          <li><a href="#features">المميزات</a></li>
+          <li><a href="#how-it-works">كيف تعمل</a></li>
+          <li><a href="#testimonials">آراء الأمهات</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+        </ul>
+      </nav>
+      <a href="#cta" class="btn btn--primary site-header__mobile-cta">ابدئي رحلتك الآن</a>
+    </div>
+  </header>
 
   <main id="main-content">
     <!-- Sections will be added here -->
