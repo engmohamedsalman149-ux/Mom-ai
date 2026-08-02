@@ -474,7 +474,10 @@
           <div class="pricing__card-glow" aria-hidden="true"></div>
 
           <div class="pricing__card">
-            <span class="pricing__discount-badge">خصم 75%</span>
+            <span class="pricing__discount-badge">
+              <span aria-hidden="true">🔥</span>
+              خصم 75%
+            </span>
 
             <div class="pricing__price-block">
               <div class="pricing__old-price-row">
@@ -487,13 +490,12 @@
               <span class="pricing__today-label">اليوم فقط</span>
 
               <div class="pricing__current-price">
-                <span class="pricing__price-value">99</span>
-                <span class="pricing__price-currency">جنيه</span>
+                <span class="pricing__price-value">99 جنيه</span>
               </div>
 
-              <span class="pricing__limited-badge">
+              <span class="pricing__urgency-bar">
                 <span aria-hidden="true">🔥</span>
-                خصم 75% ينتهي خلال 3 أيام فقط
+                العرض ينتهي خلال 3 أيام فقط
               </span>
             </div>
 
@@ -529,7 +531,10 @@
           <p class="pricing__testimonial-quote">
             «الكتاب ساعدني أفهم استخدام الذكاء الاصطناعي بطريقة بسيطة، وأصبح يساعدني يوميًا في مذاكرة أولادي وتنظيم وقتي.»
           </p>
-          <p class="pricing__testimonial-author">— إحدى القارئات</p>
+          <div class="pricing__testimonial-profile">
+            <span class="pricing__testimonial-avatar" aria-hidden="true">س</span>
+            <span class="pricing__testimonial-name">سارة - أم لطفلين</span>
+          </div>
         </div>
 
         <p class="pricing__microcopy" data-reveal style="--reveal-delay: 320ms">
@@ -543,6 +548,14 @@
   </main>
 
   <!-- Footer component will be added here -->
+
+  <div class="sticky-cta" aria-hidden="true">
+    <div class="sticky-cta__info">
+      <span class="sticky-cta__discount">🔥 خصم 75%</span>
+      <span class="sticky-cta__price">99 جنيه فقط</span>
+    </div>
+    <a href="#pricing" class="btn btn--primary sticky-cta__button">احصلي على الكتاب الآن</a>
+  </div>
 
   <script src="scripts/main.js" type="module"></script>
 </body>

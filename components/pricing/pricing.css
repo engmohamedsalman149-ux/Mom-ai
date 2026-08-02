@@ -74,7 +74,7 @@
 
 .pricing__card-wrap {
   position: relative;
-  max-width: 460px;
+  max-width: 540px;
   margin-inline: auto;
   animation: pricing-card-float 7s ease-in-out infinite;
 }
@@ -123,17 +123,17 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -58%);
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2xs);
-  padding: var(--space-xs) var(--space-lg);
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-xl);
   border-radius: var(--radius-full);
   background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   color: var(--color-text-inverse);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
-  box-shadow: var(--shadow-primary);
+  box-shadow: var(--shadow-primary), 0 0 28px rgba(108, 78, 227, 0.4);
   animation: pricing-float 5s ease-in-out infinite;
   white-space: nowrap;
 }
@@ -186,41 +186,34 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: var(--space-xs);
   line-height: 1;
 }
 
 .pricing__price-value {
-  font-size: clamp(3rem, 2.2rem + 4vw, var(--font-size-4xl));
+  font-size: clamp(3.25rem, 2.2rem + 6vw, 5rem);
   font-weight: var(--font-weight-bold);
+  white-space: nowrap;
   background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.pricing__price-currency {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.pricing__limited-badge {
-  display: inline-flex;
+.pricing__urgency-bar {
+  display: flex;
   align-items: center;
-  gap: var(--space-2xs);
-  margin-top: var(--space-md);
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--radius-full);
+  justify-content: center;
+  gap: var(--space-xs);
+  width: 100%;
+  margin-top: var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
   background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
   color: var(--color-text-inverse);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   box-shadow: var(--shadow-sm);
-  animation: pricing-badge-pulse 2.4s ease-in-out infinite;
+  animation: pricing-urgency-pulse 3s ease-in-out infinite;
 }
 
 /* Feature list */
@@ -270,6 +263,8 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  padding-block: var(--space-lg);
+  font-size: var(--font-size-md);
   margin-bottom: var(--space-md);
   animation: pricing-glow 2.6s ease-in-out infinite;
 }
@@ -293,14 +288,35 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
-  gap: var(--space-md);
+  justify-content: center;
+  gap: var(--space-lg);
 }
 
 .pricing__trust span {
+  position: relative;
+  padding-inline-start: var(--space-lg);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-muted);
+}
+
+.pricing__trust span:first-child {
+  padding-inline-start: 0;
+}
+
+.pricing__trust span:first-child::before {
+  content: none;
+}
+
+.pricing__trust span::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background-color: var(--color-border);
 }
 
 /* Testimonial */
@@ -342,10 +358,31 @@
   font-size: var(--font-size-md);
   color: var(--color-text);
   line-height: var(--line-height-loose);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
-.pricing__testimonial-author {
+.pricing__testimonial-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.pricing__testimonial-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.pricing__testimonial-name {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-muted);
@@ -374,22 +411,22 @@
 @keyframes pricing-float {
   0%,
   100% {
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -58%);
   }
   50% {
-    transform: translate(-50%, -65%);
+    transform: translate(-50%, -68%);
   }
 }
 
-@keyframes pricing-badge-pulse {
+@keyframes pricing-urgency-pulse {
   0%,
   100% {
-    transform: scale(1);
+    opacity: 1;
     box-shadow: var(--shadow-sm);
   }
   50% {
-    transform: scale(1.035);
-    box-shadow: 0 6px 18px rgba(255, 138, 101, 0.45);
+    opacity: 0.92;
+    box-shadow: 0 4px 14px rgba(255, 138, 101, 0.35);
   }
 }
 
@@ -426,5 +463,70 @@
 @media (min-width: 640px) {
   .pricing__card {
     padding: var(--space-3xl) var(--space-2xl) var(--space-2xl);
+  }
+}
+
+/* ==========================================================================
+   Mobile sticky CTA bar
+   ========================================================================== */
+
+.sticky-cta {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  #main-content {
+    padding-bottom: 84px;
+  }
+
+  .sticky-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    position: fixed;
+    bottom: 0;
+    inset-inline: 0;
+    z-index: var(--z-toast);
+    padding: var(--space-sm) var(--space-lg);
+    background-color: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -8px 24px rgba(28, 26, 38, 0.1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .sticky-cta {
+      background-color: rgba(20, 18, 28, 0.94);
+    }
+  }
+
+  .sticky-cta__info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  .sticky-cta__discount {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent);
+  }
+
+  .sticky-cta__price {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .sticky-cta__button {
+    flex-shrink: 0;
+    padding: var(--space-xs) var(--space-lg);
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
   }
 }
