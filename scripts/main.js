@@ -4,8 +4,10 @@
  */
 
 import { initHeader } from "../components/header/header.js";
+import { initHero } from "../components/hero/hero.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("is-ready");
   initHeader();
+  initHero();
 });
