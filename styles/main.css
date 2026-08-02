@@ -10,3 +10,4 @@
 /* Component styles will be imported below as they are built */
 @import url("../components/header/header.css");
 @import url("../components/hero/hero.css");
+@import url("../components/features/features.css");

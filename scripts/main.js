@@ -5,9 +5,13 @@
 
 import { initHeader } from "../components/header/header.js";
 import { initHero } from "../components/hero/hero.js";
+import { initScrollReveal } from "../components/features/features.js";
+
+document.documentElement.classList.add("js-enabled");
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("is-ready");
   initHeader();
   initHero();
+  initScrollReveal();
 });
