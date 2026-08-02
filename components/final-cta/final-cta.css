@@ -99,47 +99,6 @@
   margin-top: var(--space-2xs);
 }
 
-/* Countdown */
-
-.final-cta__countdown {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
-}
-
-.final-cta__countdown-unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  min-width: 52px;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-sm);
-  background-color: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.final-cta__countdown-value {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-bold);
-  font-variant-numeric: tabular-nums;
-  color: #fff;
-  line-height: 1;
-}
-
-.final-cta__countdown-label {
-  font-size: 10px;
-  font-weight: var(--font-weight-medium);
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.final-cta__countdown-sep {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semibold);
-  color: rgba(255, 255, 255, 0.5);
-}
-
 /* CTA button */
 
 .final-cta__cta {
@@ -180,7 +139,6 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-3xl);
-  margin-bottom: var(--space-3xl);
 }
 
 .final-cta__trust-item {
@@ -196,62 +154,7 @@
   font-size: 1.2em;
 }
 
-/* Features */
-
-.final-cta__features {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.final-cta__feature {
-  display: flex;
-  flex: 1 1 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-xs);
-  padding: var(--space-lg) var(--space-lg);
-  border-radius: var(--radius-md);
-  background-color: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
-}
-
 @media (min-width: 640px) {
-  .final-cta__feature:hover {
-    transform: translateY(-6px);
-    background-color: rgba(255, 255, 255, 0.22);
-    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
-  }
-}
-
-.final-cta__feature-icon {
-  font-size: 2.3rem;
-  margin-bottom: var(--space-2xs);
-}
-
-.final-cta__feature-title {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  color: #fff;
-}
-
-.final-cta__feature-desc {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-regular);
-  color: rgba(255, 255, 255, 0.75);
-}
-
-@media (min-width: 640px) {
-  .final-cta__features {
-    flex-direction: row;
-    justify-content: center;
-    gap: var(--space-2xl);
-  }
-
   .final-cta__panel {
     padding: var(--space-4xl) var(--space-3xl);
   }

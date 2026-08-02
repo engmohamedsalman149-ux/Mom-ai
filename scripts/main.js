@@ -10,7 +10,6 @@ import { initGallery } from "../components/gallery/gallery.js";
 import { initRoadmap } from "../components/roadmap/roadmap.js";
 import { initTestimonialsSlider } from "../components/testimonials/testimonials.js";
 import { initFaq } from "../components/faq/faq.js";
-import { initCountdown } from "../components/final-cta/final-cta.js";
 
 document.documentElement.classList.add("js-enabled");
 
@@ -23,5 +22,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initRoadmap();
   initTestimonialsSlider();
   initFaq();
-  initCountdown();
 });

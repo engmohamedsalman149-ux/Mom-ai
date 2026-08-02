@@ -110,13 +110,16 @@
         </div>
 
         <div class="hero__visual">
-          <div class="hero__image-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5" />
-              <circle cx="8.5" cy="9.5" r="1.5" fill="currentColor" />
-              <path d="M3 16L8 12L12 15L16 11L21 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <span>صورة الأم والطفل — قريبًا</span>
+          <div class="hero__mockup">
+            <img
+              src="assets/images/ebook-cover.jpg"
+              alt="غلاف كتاب الذكاء الاصطناعي للأمهات"
+              class="hero__mockup-cover"
+              width="640"
+              height="800"
+              loading="eager"
+              decoding="async"
+            />
           </div>
 
           <div class="hero__glass-card hero__glass-card--stats">
@@ -511,7 +514,7 @@
               استثمار أقل من تكلفة وجبة، لكنه قد يوفر عليك ساعات كل أسبوع.
             </p>
 
-            <a href="#pricing" class="btn btn--primary btn--lg pricing__cta">احصلي على الكتاب الآن — 99 جنيه فقط</a>
+            <a href="#pricing" class="btn btn--primary btn--lg pricing__cta">احصلي على نسختك الآن — 99 جنيه فقط</a>
 
             <p class="pricing__delivery-note">
               <span aria-hidden="true">📥</span>
@@ -745,41 +748,21 @@
           <div class="final-cta__content">
             <h2 class="final-cta__title" id="final-cta-title">
               <span aria-hidden="true">✨</span>
-              ابدئي اليوم... وامنحي نفسك وقتًا أكثر لما يهم.
+              جاهزة تبدئي؟
             </h2>
 
             <p class="final-cta__text">
-              كل يوم تؤجلين تعلم الذكاء الاصطناعي هو يوم تضيع فيه فرصة لتوفير وقتك، وتنظيم بيتك، ومساعدة أطفالك، وتطوير نفسك.
-            </p>
-            <p class="final-cta__text">
-              هذا الكتاب صُمم ليكون دليلك العملي خطوة بخطوة، حتى تتمكني من استخدام الذكاء الاصطناعي بسهولة وثقة في حياتك اليومية.
+              ابدئي اليوم رحلتك مع الذكاء الاصطناعي، ووفري وقتك، وساعدي أطفالك، وطوري مهاراتك خطوة بخطوة.
             </p>
 
             <div class="final-cta__price">
               <span class="final-cta__price-old">بدلاً من 400 جنيه</span>
               <span class="final-cta__price-new">99 جنيه فقط</span>
               <span class="final-cta__price-save">🔥 خصم 75% لفترة محدودة</span>
-
-              <div class="final-cta__countdown" data-countdown aria-hidden="true">
-                <div class="final-cta__countdown-unit">
-                  <span class="final-cta__countdown-value" data-countdown-days>00</span>
-                  <span class="final-cta__countdown-label">يوم</span>
-                </div>
-                <span class="final-cta__countdown-sep">:</span>
-                <div class="final-cta__countdown-unit">
-                  <span class="final-cta__countdown-value" data-countdown-hours>00</span>
-                  <span class="final-cta__countdown-label">ساعة</span>
-                </div>
-                <span class="final-cta__countdown-sep">:</span>
-                <div class="final-cta__countdown-unit">
-                  <span class="final-cta__countdown-value" data-countdown-minutes>00</span>
-                  <span class="final-cta__countdown-label">دقيقة</span>
-                </div>
-              </div>
             </div>
 
             <a href="#pricing" class="btn final-cta__cta">
-              احصلي على الكتاب الآن
+              ابدئي رحلتك الآن
               <span class="final-cta__cta-arrow" aria-hidden="true">→</span>
             </a>
 
@@ -787,24 +770,6 @@
               <span class="final-cta__trust-item"><span class="final-cta__trust-icon" aria-hidden="true">🔒</span> دفع آمن</span>
               <span class="final-cta__trust-item"><span class="final-cta__trust-icon" aria-hidden="true">⚡</span> تحميل فوري</span>
               <span class="final-cta__trust-item"><span class="final-cta__trust-icon" aria-hidden="true">💜</span> تحديثات مجانية مدى الحياة</span>
-            </div>
-
-            <div class="final-cta__features">
-              <div class="final-cta__feature" data-reveal style="--reveal-delay: 0ms">
-                <span class="final-cta__feature-icon" aria-hidden="true">⏱️</span>
-                <span class="final-cta__feature-title">وفرّي ساعات كل أسبوع</span>
-                <span class="final-cta__feature-desc">باستعمال أدوات جاهزة</span>
-              </div>
-              <div class="final-cta__feature" data-reveal style="--reveal-delay: 80ms">
-                <span class="final-cta__feature-icon" aria-hidden="true">👩‍👧</span>
-                <span class="final-cta__feature-title">ساعدي أطفالك بطريقة أذكى</span>
-                <span class="final-cta__feature-desc">بخطوات عملية</span>
-              </div>
-              <div class="final-cta__feature" data-reveal style="--reveal-delay: 160ms">
-                <span class="final-cta__feature-icon" aria-hidden="true">🚀</span>
-                <span class="final-cta__feature-title">اكتسبي مهارة ستفيدك لسنوات</span>
-                <span class="final-cta__feature-desc">حتى بدون خبرة</span>
-              </div>
             </div>
           </div>
         </div>
