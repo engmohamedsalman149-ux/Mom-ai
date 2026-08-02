@@ -6,6 +6,7 @@
 import { initHeader } from "../components/header/header.js";
 import { initHero } from "../components/hero/hero.js";
 import { initScrollReveal } from "../components/features/features.js";
+import { initGallery } from "../components/gallery/gallery.js";
 
 document.documentElement.classList.add("js-enabled");
 
@@ -14,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeader();
   initHero();
   initScrollReveal();
+  initGallery();
 });
