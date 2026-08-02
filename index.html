@@ -322,28 +322,39 @@
       </div>
 
       <div class="lightbox" data-lightbox hidden>
-        <div class="lightbox__backdrop" data-lightbox-close></div>
-        <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="عرض الصورة بالحجم الكامل">
-          <button type="button" class="lightbox__nav lightbox__nav--prev" data-lightbox-prev aria-label="الصورة السابقة">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
+        <div class="lightbox__backdrop"></div>
 
-          <figure class="lightbox__figure">
-            <button type="button" class="lightbox__close" data-lightbox-close aria-label="إغلاق">
+        <button type="button" class="lightbox__close" data-lightbox-close aria-label="إغلاق">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <span class="lightbox__counter" data-lightbox-counter dir="ltr"></span>
+
+        <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="عرض الصورة بالحجم الكامل">
+          <div class="lightbox__stage">
+            <button type="button" class="lightbox__nav lightbox__nav--prev" data-lightbox-prev aria-label="الصورة السابقة">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
-            <img class="lightbox__image" data-lightbox-image src="" alt="" />
-            <figcaption class="lightbox__caption" data-lightbox-caption></figcaption>
-          </figure>
 
-          <button type="button" class="lightbox__nav lightbox__nav--next" data-lightbox-next aria-label="الصورة التالية">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
+            <figure class="lightbox__figure" data-lightbox-figure>
+              <img class="lightbox__image" data-lightbox-image src="" alt="" draggable="false" />
+              <figcaption class="lightbox__caption" data-lightbox-caption></figcaption>
+            </figure>
+
+            <button type="button" class="lightbox__nav lightbox__nav--next" data-lightbox-next aria-label="الصورة التالية">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <button type="button" class="lightbox__zoom-cta btn btn--secondary" data-lightbox-zoom-toggle>
+            <span aria-hidden="true">🔍</span>
+            تكبير الصورة
           </button>
         </div>
       </div>
