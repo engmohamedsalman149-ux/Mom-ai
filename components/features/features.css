@@ -65,12 +65,13 @@
 .features__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 @media (min-width: 640px) {
   .features__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
   }
 }
 
@@ -99,6 +100,16 @@
   .feature-card {
     background-color: rgba(32, 29, 43, 0.55);
     border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+.feature-card:first-child {
+  border-color: rgba(108, 78, 227, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  .feature-card:first-child {
+    border-color: rgba(108, 78, 227, 0.5);
   }
 }
 
